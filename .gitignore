@@ -1,0 +1,32 @@
+# Virtual environment
+venv/
+
+# Environment variables
+.env
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Dataset files (keep directory placeholders)
+data/raw/*
+!data/raw/.gitkeep
+
+data/processed/*
+!data/processed/.gitkeep
+
+data/external/*
+!data/external/.gitkeep
+
+# MLflow
+mlruns/
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
