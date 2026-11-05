@@ -1,0 +1,178 @@
+{
+  "report_metadata": {
+    "generated_at": "2026-11-05T06:35:12.491795",
+    "report_version": "1.0"
+  },
+  "dataset_info": {
+    "original_filename": "test_inventory.csv",
+    "stored_filename": "inventory_20261105_063512_7469fe70.csv",
+    "dataset_type": "inventory",
+    "file_size_bytes": 1341,
+    "file_size_mb": 0.0,
+    "upload_timestamp": "2026-11-05T01:05:12.445580"
+  },
+  "processing_summary": {
+    "status": "success",
+    "original_rows": 50,
+    "original_columns": 4,
+    "final_rows": 50,
+    "final_columns": 4,
+    "rows_removed": 0
+  },
+  "column_mapping": {
+    "mapped_columns": {
+      "Store_ID": "store_id",
+      "Product_ID": "sku_id",
+      "Stock_Quantity": "stock_quantity"
+    },
+    "columns_mapped_count": 3,
+    "columns_removed": 1
+  },
+  "data_quality_summary": {
+    "missing_values": {
+      "total_count": 0,
+      "percentage": 0.0,
+      "columns_affected": 0
+    },
+    "duplicates": {
+      "exact_duplicate_count": 0,
+      "duplicate_percentage": 0.0
+    },
+    "business_key_duplicates": {
+      "count": 50,
+      "percentage": 100.0
+    },
+    "outliers": {
+      "total_count": 0,
+      "columns_affected": 0
+    }
+  },
+  "validation_details": {
+    "missing_values": {
+      "total_missing_values": 0,
+      "total_cells": 200,
+      "missing_percentage": 0.0,
+      "columns_with_missing": [],
+      "column_details": {
+        "Date": {
+          "missing_count": 0,
+          "missing_percentage": 0.0,
+          "total_rows": 50
+        },
+        "store_id": {
+          "missing_count": 0,
+          "missing_percentage": 0.0,
+          "total_rows": 50
+        },
+        "sku_id": {
+          "missing_count": 0,
+          "missing_percentage": 0.0,
+          "total_rows": 50
+        },
+        "stock_quantity": {
+          "missing_count": 0,
+          "missing_percentage": 0.0,
+          "total_rows": 50
+        }
+      }
+    },
+    "exact_duplicates": {
+      "exact_duplicate_count": 0,
+      "duplicate_percentage": 0.0,
+      "unique_rows": 50,
+      "total_rows": 50
+    },
+    "business_key_duplicates": {
+      "business_key": [
+        "store_id",
+        "sku_id"
+      ],
+      "business_key_duplicate_count": 50,
+      "duplicate_percentage": 100.0,
+      "unique_combinations": 0,
+      "duplicate_groups_sample": [
+        {
+          "key": "('S000', 'P000')",
+          "count": 5,
+          "sample_indices": [
+            0,
+            10,
+            20
+          ]
+        },
+        {
+          "key": "('S000', 'P005')",
+          "count": 5,
+          "sample_indices": [
+            5,
+            15,
+            25
+          ]
+        },
+        {
+          "key": "('S001', 'P001')",
+          "count": 5,
+          "sample_indices": [
+            1,
+            11,
+            21
+          ]
+        },
+        {
+          "key": "('S001', 'P006')",
+          "count": 5,
+          "sample_indices": [
+            6,
+            16,
+            26
+          ]
+        },
+        {
+          "key": "('S002', 'P002')",
+          "count": 5,
+          "sample_indices": [
+            2,
+            12,
+            22
+          ]
+        }
+      ]
+    },
+    "outliers": {
+      "method": "IQR",
+      "total_outliers": 0,
+      "columns_with_outliers": [],
+      "outlier_details": {},
+      "recommendation": "No outliers detected"
+    },
+    "data_integrity": {
+      "errors": [],
+      "warnings": [],
+      "details": {}
+    }
+  },
+  "errors": [
+    "Found 50 records with duplicate business keys (store_id, sku_id). This indicates data integrity issues."
+  ],
+  "warnings": [
+    "Unexpected columns (will be ignored): Date"
+  ],
+  "recommendations": [
+    {
+      "category": "data_integrity",
+      "severity": "critical",
+      "message": "Found 50 records with duplicate business keys. This indicates data quality issues. Review data source and deduplication logic."
+    },
+    {
+      "category": "overall",
+      "severity": "critical",
+      "message": "Dataset failed validation. Address critical errors before proceeding to next module."
+    }
+  ],
+  "validation_status": {
+    "passed": false,
+    "total_errors": 1,
+    "total_warnings": 1,
+    "critical_issues": 1
+  }
+}

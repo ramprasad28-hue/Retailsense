@@ -1,0 +1,118 @@
+{
+  "report_metadata": {
+    "generated_at": "2026-11-05T06:38:55.208803",
+    "report_version": "1.0"
+  },
+  "dataset_info": {
+    "original_filename": "test_inventory.csv",
+    "stored_filename": "inventory_20261105_063855_7469fe70.csv",
+    "dataset_type": "inventory",
+    "file_size_bytes": 786,
+    "file_size_mb": 0.0,
+    "upload_timestamp": "2026-11-05T01:08:55.181365"
+  },
+  "processing_summary": {
+    "status": "success",
+    "original_rows": 50,
+    "original_columns": 3,
+    "final_rows": 50,
+    "final_columns": 3,
+    "rows_removed": 0
+  },
+  "column_mapping": {
+    "mapped_columns": {
+      "Store_ID": "store_id",
+      "Product_ID": "sku_id",
+      "Stock_Quantity": "stock_quantity"
+    },
+    "columns_mapped_count": 3,
+    "columns_removed": 0
+  },
+  "data_quality_summary": {
+    "missing_values": {
+      "total_count": 0,
+      "percentage": 0.0,
+      "columns_affected": 0
+    },
+    "duplicates": {
+      "exact_duplicate_count": 0,
+      "duplicate_percentage": 0.0
+    },
+    "business_key_duplicates": {
+      "count": 0,
+      "percentage": 0.0
+    },
+    "outliers": {
+      "total_count": 0,
+      "columns_affected": 0
+    }
+  },
+  "validation_details": {
+    "missing_values": {
+      "total_missing_values": 0,
+      "total_cells": 150,
+      "missing_percentage": 0.0,
+      "columns_with_missing": [],
+      "column_details": {
+        "store_id": {
+          "missing_count": 0,
+          "missing_percentage": 0.0,
+          "total_rows": 50
+        },
+        "sku_id": {
+          "missing_count": 0,
+          "missing_percentage": 0.0,
+          "total_rows": 50
+        },
+        "stock_quantity": {
+          "missing_count": 0,
+          "missing_percentage": 0.0,
+          "total_rows": 50
+        }
+      }
+    },
+    "exact_duplicates": {
+      "exact_duplicate_count": 0,
+      "duplicate_percentage": 0.0,
+      "unique_rows": 50,
+      "total_rows": 50
+    },
+    "business_key_duplicates": {
+      "business_key": [
+        "store_id",
+        "sku_id"
+      ],
+      "business_key_duplicate_count": 0,
+      "duplicate_percentage": 0.0,
+      "unique_combinations": 50,
+      "duplicate_groups_sample": []
+    },
+    "outliers": {
+      "method": "IQR",
+      "total_outliers": 0,
+      "columns_with_outliers": [],
+      "outlier_details": {},
+      "recommendation": "No outliers detected"
+    },
+    "data_integrity": {
+      "errors": [],
+      "warnings": [],
+      "details": {}
+    }
+  },
+  "errors": [],
+  "warnings": [],
+  "recommendations": [
+    {
+      "category": "overall",
+      "severity": "critical",
+      "message": "Dataset failed validation. Address critical errors before proceeding to next module."
+    }
+  ],
+  "validation_status": {
+    "passed": true,
+    "total_errors": 0,
+    "total_warnings": 0,
+    "critical_issues": 0
+  }
+}
